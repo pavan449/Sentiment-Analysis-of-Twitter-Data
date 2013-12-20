@@ -1,6 +1,10 @@
 import sys
 import simplejson
 
+# parse the input file and write the tweets containg the positve emoticons to a seperate file
+# usage: python emoticons_p.py datafile
+#output would be in data.positve file and the unlabled data is in .final file
+
 emotions = (":)",":-)","=)",";)",":D","=D",":P",":-P")
 
 def getEmoticonsTweets(argfile):

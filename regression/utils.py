@@ -1,4 +1,4 @@
-# Lat Long - UTM, UTM - Lat Long conversions
+# Lat Long - UTM, UTM - Lat Long conversions, used by makeWordList.py
 
 from math import pi, sin, cos, tan, sqrt
 from datetime import datetime, date, timedelta

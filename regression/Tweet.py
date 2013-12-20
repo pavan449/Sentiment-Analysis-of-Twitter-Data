@@ -1,3 +1,4 @@
+#utility class used by makeWordList.py
 class Tweet:
 
     def __init__(self):
