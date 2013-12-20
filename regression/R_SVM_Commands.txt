@@ -1,0 +1,51 @@
+R commands to do statistical analysis:
+
+The tab serperated file with the value are stored in  " C:\Users\pavan\Desktop\R Data\statfile_t_sqrt.dat " file
+
+To load the data into memory
+
+>> dataset <- read.table("C:/Users/pavan/Desktop/R Data/normal/statfile_t_sqrt.dat", header = TRUE, sep = "\t", nrows=2249011)
+
+To generate histograms for the sentiment values and LIWC posem, negemo values
+
+>> hist(dataset[,6], col='grey', xlab="calculated sentiment values",  main="histograms with sentiment range")
+
+>> hist(dataset[,4]-dataset[,3] ,  xlab="posemo-negemo",  main="LIWC Sentiment values") 
+
+
+To calculate the corelation values:
+cor.test(dataset[,3] - dataset[,2],dataset[,5])
+
+
+To generate scatter plots use
+
+>> plot(dataset[,6], dataset[,4]-dataset[,3], main="negamo,sentimentval scatterplot",   xlab="SentimentVal ", ylab="Negamo") 
+>> abline(lm(dataset[,3] ~ dataset[,6]))
+
+>> plot(dataset[,6], dataset[,3], main="negamo,sentimentval scatterplot",   xlab="SentimentVal ", ylab="Negamo") 
+>> abline(lm(dataset[,3] ~ dataset[,6]))
+
+
+To generate box plots 
+
+>> boxplot((dataset[,3] - dataset[,2])~dataset[,5],data=NULL, main="sentVal VS Posemo-Negemo", xlab="calculated sentiment values", ylab="Posemo-Negemo")
+
+
+
+SVMlight Commands:
+
+For training the model in classificaiton mode
+
+>> svm_learn training_file model_file
+
+for regression 
+
+>> svm_learn -z r training_file model_file
+
+
+for labeling the test data set
+
+>> svm_classify testdata_file model_file prediction_file
+
+
+

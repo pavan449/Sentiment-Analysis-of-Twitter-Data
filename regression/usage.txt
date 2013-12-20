@@ -1,0 +1,23 @@
+Usage of the python scripts with the order of execution
+
+ >> python emoticons_n.py complete_tweets_json_file
+
+ >> python emoticons_p.py complete_tweets_json_file.res
+
+To generate the feature sets for training data
+
+ >> python makeWordList.py WORDS_all-sick.txt tweets.positive tweets.nagative
+
+To generate the feature sets for test data
+
+ >> python makeWordList.py WORDS_all-sick.txt tweets.res
+
+
+Use SVM light described in the commands help file to generate prediction file
+
+To generate the tab separated file
+
+>> python StatDatagen_t.py tweets.res  prediction_file 
+ 
+
+
