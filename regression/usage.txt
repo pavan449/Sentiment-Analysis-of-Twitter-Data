@@ -15,7 +15,9 @@ To generate the feature sets for test data
 
 Use SVM light described in the commands help file to generate prediction file
 
-To generate the tab separated file
+To generate the tab separated file and embed the predicted sentiment values into the test set
+
+>> python StatAppend.py tweets.res prediction_file
 
 >> python StatDatagen_t.py tweets.res  prediction_file 
  
