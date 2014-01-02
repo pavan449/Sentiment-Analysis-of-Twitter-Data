@@ -1,5 +1,5 @@
 #!/bin/bash
-#usage sh automation.sh  nyc.trim.liwc(data)
+#usage sh automation.sh  nyc.trim.liwc(data) Words_all_sick.txt(sentiment dicitionary)
 #output: nyc.trim.liwc.append.sentiment( Data with calculated sentiment values appended)
 #        trainingSet.dat( features set for the training data)
 #	 testSet.dat( features set for the test data set)	
